@@ -51,35 +51,35 @@ app.post("/api/insert", (req, res) => {
   } = req.body.formdata;
 
 db.query(
-    "INSERT INTO courseevaluation (instructor_name,module,an1,an2,an3,an4,an5,an6,an7,an8,an9,an10,an11,an12,an13,student_effort,student_work,message) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-    [
-      instructor_name,
-      module,
-      an1,
-      an2,
-      an3,
-      an4,
-      an5,
-      an6,
-      an7,
-      an8,
-      an9,
-      an10,
-      an11,
-      an12,
-      an13,
-      student_effort,
-      student_work,
-      message,
-    ],
-    (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("sucess");
-      }
+  "INSERT INTO dataTable (instructor_name,module,an1,an2,an3,an4,an5,an6,an7,an8,an9,an10,an11,an12,an13,student_effort,student_work,message) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  [
+    instructor_name,
+    module,
+    an1,
+    an2,
+    an3,
+    an4,
+    an5,
+    an6,
+    an7,
+    an8,
+    an9,
+    an10,
+    an11,
+    an12,
+    an13,
+    student_effort,
+    student_work,
+    message,
+  ],
+  (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("sucess");
     }
-  );
+  }
+);
   
 });
 app.listen(PORT, () => {
