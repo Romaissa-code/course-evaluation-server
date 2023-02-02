@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
-// const cors = require("cors");
+const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const DB_HOST = process.env.DB_HOST || "localhost";
 const DB_USER = process.env.DB_USER || "root";
@@ -10,7 +10,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD || "Romaissa25";
 const DB_NAME = process.env.DB_NAME || "coursedatabase";
 const DB_PORT = process.env.DB_PORT || 3306;
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
